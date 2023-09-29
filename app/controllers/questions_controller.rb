@@ -1,21 +1,21 @@
 class QuestionsController < ApplicationController
+  before_action :set_question!, only: %i[show destroy edit update]
+
   def show
-    @question = Question.find_by id: params[:id]
+    @answer = @question.answers.build
+    @answers = Answer.order created_at: :desc
   end
 
   def destroy
-    @question = Question.find_by id: params[:id]
     @question.destroy
     flash[:success] = "Question deleted!"
     redirect_to questions_path
   end
 
   def edit
-    @question = Question.find_by id: params[:id]
   end
   
   def update
-    @question = Question.find_by id: params[:id]
     if @question.update questions_params
       flash[:success] = "Question updated!"
       redirect_to questions_path
@@ -46,6 +46,10 @@ class QuestionsController < ApplicationController
 
   def questions_params
     params.require(:question).permit(:title, :body)
+  end
+
+  def set_question!
+    @question = Question.find params[:id]
   end
 
 end
