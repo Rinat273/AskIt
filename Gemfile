@@ -28,6 +28,8 @@ gem "jbuilder"
 # gem "redis", "~> 4.0"
 
 gem "pagy", "~> 6.1"
+gem "draper"
+gem "valid_email2"
 
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
@@ -51,6 +53,7 @@ group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
   gem "faker", '~> 3' 
+  gem "pry-rails"
 end
 
 group :development do
