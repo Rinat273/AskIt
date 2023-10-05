@@ -58,6 +58,8 @@ GEM
     activerecord (7.0.8)
       activemodel (= 7.0.8)
       activesupport (= 7.0.8)
+    activerecord-import (1.5.0)
+      activerecord (>= 4.2)
     activestorage (7.0.8)
       actionpack (= 7.0.8)
       activejob (= 7.0.8)
@@ -77,6 +79,14 @@ GEM
     bootsnap (1.16.0)
       msgpack (~> 1.2)
     builder (3.2.4)
+    caxlsx (3.4.1)
+      htmlentities (~> 4.3, >= 4.3.4)
+      marcel (~> 1.0)
+      nokogiri (~> 1.10, >= 1.10.4)
+      rubyzip (>= 1.3.0, < 3)
+    caxlsx_rails (0.6.3)
+      actionpack (>= 3.1)
+      caxlsx (>= 3.0)
     coderay (1.1.3)
     concurrent-ruby (1.2.2)
     crass (1.0.6)
@@ -98,6 +108,7 @@ GEM
       i18n (>= 1.8.11, < 2)
     globalid (1.2.1)
       activesupport (>= 6.1)
+    htmlentities (4.3.4)
     i18n (1.14.1)
       concurrent-ruby (~> 1.0)
     io-console (0.6.0)
@@ -215,6 +226,10 @@ GEM
       rubocop (>= 1.33.0, < 2.0)
     ruby-progressbar (1.13.0)
     ruby2_keywords (0.0.5)
+    rubyXL (3.4.25)
+      nokogiri (>= 1.10.8)
+      rubyzip (>= 1.3.0)
+    rubyzip (2.3.2)
     sprockets (4.2.1)
       concurrent-ruby (~> 1.0)
       rack (>= 2.2.4, < 4)
@@ -246,8 +261,11 @@ PLATFORMS
   arm64-darwin-22
 
 DEPENDENCIES
+  activerecord-import (~> 1.5)
   bcrypt (~> 3.1.7)
   bootsnap
+  caxlsx (~> 3.4)
+  caxlsx_rails (~> 0.6)
   cssbundling-rails
   debug
   draper
@@ -261,6 +279,8 @@ DEPENDENCIES
   rubocop (~> 1.56)
   rubocop-performance (~> 1.19)
   rubocop-rails (~> 2.21)
+  rubyXL (~> 3.4)
+  rubyzip (~> 2.3)
   sprockets-rails
   sqlite3 (~> 1.4)
   tzinfo-data
