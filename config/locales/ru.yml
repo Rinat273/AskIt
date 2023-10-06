@@ -92,7 +92,7 @@ ru:
     create:
       success: 'Ответ создан!'
     destroy:
-      success: 'Ответ удалён!'
+       success: 'Ответ удалён!'
   global:
     dialog:
       you_sure: Вы уверены?
