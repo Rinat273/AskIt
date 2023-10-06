@@ -29,15 +29,15 @@ gem 'jbuilder'
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 
-gem 'draper'
-gem 'pagy', '~> 6.1'
-gem 'valid_email2'
-gem 'rubyzip', '~> 2.3'
+gem 'activerecord-import', '~> 1.5'
 gem 'caxlsx', '~> 3.4'
 gem 'caxlsx_rails', '~> 0.6'
+gem 'draper'
+gem 'pagy', '~> 6.1'
+gem 'rails-i18n', '~> 7'
 gem 'rubyXL', '~> 3.4'
-gem 'activerecord-import', '~> 1.5'
-
+gem 'rubyzip', '~> 2.3'
+gem 'valid_email2'
 
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"

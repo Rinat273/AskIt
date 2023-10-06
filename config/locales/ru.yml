@@ -1,0 +1,51 @@
+ru:
+  en: Английский
+  ru: Русский
+  activerecord:
+    models:
+      question: 'Вопрос'
+    attributes:
+      question:
+        title: "Заголовок"
+        body: "Текст"
+  pages:
+    index:
+      title: "Добро пожаловать в AskIt!"
+  menu:
+    home: "Главная"
+    questions: "Вопросы"
+  questions:
+    create:
+      success: 'Вопрос создан!'
+    update:
+      success: 'Вопрос изменён!'
+    destroy:
+      success: 'Вопрос удалён!'
+  admin:
+    users:
+      create:
+        success: 'Пользователи импортированны!'
+  answers:
+    create:
+      success: 'Ответ создан!'
+    update:
+      success: 'Ответ изменён!'
+    destroy:
+      success: 'Ответ удалён!'
+  concerns:
+    authentication:
+      require_authentication:
+        warning: 'Вы не вошли в систему!'
+      require_no_authentication:
+        warning: 'Вы уже вошли в систему!'
+  sessions:
+    create:
+      warning: "Неверный адрес электронной почты и/или пароль"
+      success: "С возвращением, "
+    destroy:
+      success: "Увидимся позже!"
+  users:
+    update:
+      success: "Ваш профиль был успешно обновлен!"
+    create:
+      success: 'Добро пожаловать в приложение, '

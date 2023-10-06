@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class UserBulkService < ApplicationService
   attr_reader :archive
 
@@ -20,7 +22,7 @@ class UserBulkService < ApplicationService
   def users_from(entry)
     sheet = RubyXL::Parser.parse_buffer(entry.get_input_stream.read)[0]
     sheet.map do |row|
-      cells = row.cells #[0..2].map { |c| c&.value.to_s }
+      cells = row.cells # [0..2].map { |c| c&.value.to_s }
       User.new name: cells[0].value,
                email: cells[1].value,
                password: cells[2].value,

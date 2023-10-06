@@ -1,3 +1,64 @@
+en:
+  en: English
+  ru: Russian
+  activerecord:
+    models:
+      question: Question
+    attributes:
+      question:
+        title: "Title"
+        body: "Body"
+  pages:
+    index:
+      title: "Wellcome to AskIt!"
+  menu:
+    home: "Home"
+    questions: "Questions"
+  questions:
+    create:
+      success: 'Question created!'
+    update:
+      success: 'Question updated!'
+    destroy:
+      success: 'Question deleted!'
+  admin:
+    users:
+      create:
+        success: 'Users imported!'
+  answers:
+    create:
+      success: 'Answer created!'
+    update:
+      success: 'Answer updated!'
+    destroy:
+      success: 'Answer deleted!'
+  concerns:
+    authentication:
+      require_authentication:
+        warning: 'You are not signed in!'
+      require_no_authentication:
+        warning: 'You are already signed in!'
+  sessions:
+    create:
+      warning: 'Incorrect email and/or password'
+      success: 'Welcome back, '
+    destroy:
+      success: 'See you later!'
+  users:
+    update:
+      success: 'Your profile was successfully updated!'
+    create:
+      success: 'Welcome to the app, '
+
+
+      
+
+
+
+
+
+
+
 # Files in the config/locales directory are used for internationalization
 # and are automatically loaded by Rails. If you want to use locales other
 # than English, add the necessary files in this directory.
@@ -29,5 +90,3 @@
 # To learn more, please read the Rails Internationalization guide
 # available at https://guides.rubyonrails.org/i18n.html.
 
-en:
-  hello: "Hello world"
