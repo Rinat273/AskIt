@@ -72,6 +72,8 @@ GEM
       i18n (>= 1.6, < 2)
       minitest (>= 5.1)
       tzinfo (~> 2.0)
+    addressable (2.8.5)
+      public_suffix (>= 2.0.2, < 6.0)
     ast (2.4.2)
     base64 (0.1.1)
     bcrypt (3.1.19)
@@ -96,6 +98,10 @@ GEM
     debug (1.8.0)
       irb (>= 1.5.0)
       reline (>= 0.3.1)
+    dotenv (2.8.1)
+    dotenv-rails (2.8.1)
+      dotenv (= 2.8.1)
+      railties (>= 3.2)
     draper (4.0.2)
       actionpack (>= 5.0)
       activemodel (>= 5.0)
@@ -106,6 +112,14 @@ GEM
     erubi (1.12.0)
     faker (3.2.1)
       i18n (>= 1.8.11, < 2)
+    faraday (2.7.11)
+      base64
+      faraday-net_http (>= 2.0, < 3.1)
+      ruby2_keywords (>= 0.0.4)
+    faraday-gzip (2.0.0)
+      faraday (>= 1.0)
+      zlib (~> 3.0)
+    faraday-net_http (3.0.2)
     globalid (1.2.1)
       activesupport (>= 6.1)
     htmlentities (4.3.4)
@@ -122,6 +136,13 @@ GEM
       railties (>= 6.0.0)
     json (2.6.3)
     language_server-protocol (3.17.0.3)
+    lokalise_manager (4.0.0)
+      ruby-lokalise-api (~> 8.0)
+      rubyzip (~> 2.3)
+      zeitwerk (~> 2.4)
+    lokalise_rails (6.0.0)
+      lokalise_manager (~> 4.0)
+      zeitwerk (~> 2.4)
     loofah (2.21.3)
       crass (~> 1.0.2)
       nokogiri (>= 1.12.0)
@@ -152,6 +173,7 @@ GEM
     parser (3.2.2.4)
       ast (~> 2.4.1)
       racc
+    pg (1.5.4)
     pry (0.14.2)
       coderay (~> 1.1)
       method_source (~> 1.0)
@@ -159,6 +181,7 @@ GEM
       pry (>= 0.10.4)
     psych (5.1.0)
       stringio
+    public_suffix (5.0.3)
     puma (5.6.7)
       nio4r (~> 2.0)
     racc (1.7.1)
@@ -220,6 +243,8 @@ GEM
       unicode-display_width (>= 2.4.0, < 3.0)
     rubocop-ast (1.29.0)
       parser (>= 3.2.1.0)
+    rubocop-i18n (3.0.0)
+      rubocop (~> 1.0)
     rubocop-performance (1.19.1)
       rubocop (>= 1.7.0, < 2.0)
       rubocop-ast (>= 0.4.0)
@@ -227,6 +252,12 @@ GEM
       activesupport (>= 4.2.0)
       rack (>= 1.1)
       rubocop (>= 1.33.0, < 2.0)
+    ruby-lokalise-api (8.0.1)
+      addressable (~> 2.5)
+      faraday (~> 2.0)
+      faraday-gzip (~> 2.0)
+      json (~> 2)
+      zeitwerk (~> 2.4)
     ruby-progressbar (1.13.0)
     ruby2_keywords (0.0.5)
     rubyXL (3.4.25)
@@ -259,6 +290,7 @@ GEM
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
     zeitwerk (2.6.12)
+    zlib (3.0.0)
 
 PLATFORMS
   arm64-darwin-22
@@ -271,16 +303,20 @@ DEPENDENCIES
   caxlsx_rails (~> 0.6)
   cssbundling-rails
   debug
+  dotenv-rails (~> 2.8)
   draper
   faker (~> 3)
   jbuilder
   jsbundling-rails
+  lokalise_rails (~> 6)
   pagy (~> 6.1)
+  pg
   pry-rails
-  puma (~> 5.0)
+  puma (~> 5.6)
   rails (~> 7.0.8)
   rails-i18n (~> 7)
   rubocop (~> 1.56)
+  rubocop-i18n (~> 3)
   rubocop-performance (~> 1.19)
   rubocop-rails (~> 2.21)
   rubyXL (~> 3.4)

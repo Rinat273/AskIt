@@ -15,7 +15,7 @@ gem 'sprockets-rails'
 gem 'sqlite3', '~> 1.4'
 
 # Use the Puma web server [https://github.com/puma/puma]
-gem 'puma', '~> 5.0'
+gem 'puma', '~> 5.6'
 
 # Bundle and transpile JavaScript [https://github.com/rails/jsbundling-rails]
 gem 'jsbundling-rails'
@@ -38,6 +38,8 @@ gem 'rails-i18n', '~> 7'
 gem 'rubyXL', '~> 3.4'
 gem 'rubyzip', '~> 2.3'
 gem 'valid_email2'
+gem 'dotenv-rails', '~> 2.8'
+gem 'lokalise_rails', '~> 6'
 
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
@@ -64,11 +66,16 @@ group :development, :test do
   gem 'pry-rails'
 end
 
+group :production do
+  gem 'pg'
+end
+
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem 'rubocop', '~> 1.56', require: false
   gem 'rubocop-performance', '~> 1.19', require: false
   gem 'rubocop-rails', '~> 2.21', require: false
+  gem 'rubocop-i18n', '~> 3', require: false
   gem 'web-console'
 
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
