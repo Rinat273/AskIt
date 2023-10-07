@@ -5,6 +5,8 @@ ru:
     models:
       question: Вопрос
     attributes:
+      comment:
+        body: Текст
       answer:
         body: Текст
         question: Вопрос
@@ -41,6 +43,11 @@ ru:
         upload_form:
           archive: 'Выберите архив'
           submit: 'Загрузить!'
+  comments:
+    create:
+      success: Комментарий создан!
+    destroy:
+      success: Комментарий удалён!
   users:
     new:
       title: Регистрация
@@ -71,6 +78,7 @@ ru:
     show:
       write_answer: Напишите свой ответ
       answers: Ответы
+      comments: Комментарии
     new:
       title: Новый вопрос
     index:

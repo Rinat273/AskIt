@@ -5,6 +5,8 @@ en:
     models:
       question: Question
     attributes:
+      comment:
+        body: Body
       answer:
         body: Body
         question: Question
@@ -41,6 +43,11 @@ en:
         upload_form:
           archive: 'Select archive'
           submit: 'Upload!'
+  comments:
+    create:
+      success: Comment created!
+    destroy:
+      success: Comment deleted!
   users:
     new:
       title: Registration
@@ -71,6 +78,7 @@ en:
     show:
       write_answer: Write your answer
       answers: Answers
+      comments: Comments
     new:
       title: 'New question'
     index:
