@@ -13,7 +13,7 @@ class SessionsController < ApplicationController
       flash[:success] = t('.success', name: current_user.name_or_email)
       redirect_to root_path
     else
-      flash[:warning] =  t '.invalid_creds'
+      flash[:warning] = t '.invalid_creds'
       render :new
     end
   end

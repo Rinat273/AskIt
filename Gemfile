@@ -32,16 +32,15 @@ gem 'jbuilder'
 gem 'activerecord-import', '~> 1.5'
 gem 'caxlsx', '~> 3.4'
 gem 'caxlsx_rails', '~> 0.6'
+gem 'dotenv-rails', '~> 2.8'
 gem 'draper'
+gem 'i18n-tasks', '~> 1'
+gem 'lokalise_rails'
 gem 'pagy', '~> 6.1'
 gem 'rails-i18n', '~> 7'
 gem 'rubyXL', '~> 3.4'
 gem 'rubyzip', '~> 2.3'
 gem 'valid_email2'
-gem 'dotenv-rails', '~> 2.8'
-gem 'lokalise_rails'
-gem 'i18n-tasks', '~> 1'
-
 
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
@@ -75,9 +74,9 @@ end
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem 'rubocop', '~> 1.56', require: false
+  gem 'rubocop-i18n', '~> 3', require: false
   gem 'rubocop-performance', '~> 1.19', require: false
   gem 'rubocop-rails', '~> 2.21', require: false
-  gem 'rubocop-i18n', '~> 3', require: false
   gem 'web-console'
 
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
