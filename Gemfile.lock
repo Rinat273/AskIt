@@ -331,7 +331,7 @@ DEPENDENCIES
   i18n-tasks (~> 1)
   jbuilder
   jsbundling-rails
-  lokalise_rails (~> 6)
+  lokalise_rails
   pagy (~> 6.1)
   pg
   pry-rails

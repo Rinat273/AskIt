@@ -39,8 +39,9 @@ gem 'rubyXL', '~> 3.4'
 gem 'rubyzip', '~> 2.3'
 gem 'valid_email2'
 gem 'dotenv-rails', '~> 2.8'
-gem 'lokalise_rails', '~> 6'
+gem 'lokalise_rails'
 gem 'i18n-tasks', '~> 1'
+
 
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"

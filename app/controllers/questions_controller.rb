@@ -22,7 +22,7 @@ class QuestionsController < ApplicationController
   def edit; end
 
   def create
-    @question = Question.new questions_params
+    @question = current_user.questions.build question_params
     if @question.save
       flash[:success] = t('.success')
       redirect_to questions_path
@@ -48,7 +48,7 @@ class QuestionsController < ApplicationController
 
   private
 
-  def questions_params
+  def question_params
     params.require(:question).permit(:title, :body)
   end
 
